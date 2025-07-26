@@ -1,0 +1,6 @@
+'.source.fortran':
+  editor:
+    commentStart: '! '
+    commentDelimiters:
+      line: '!'
+      block: ['/*', '*/']

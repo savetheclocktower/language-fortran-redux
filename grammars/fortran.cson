@@ -1,0 +1,40 @@
+name: 'Fortran'
+scopeName: 'source.fortran'
+type: 'modern-tree-sitter'
+parser: 'tree-sitter-fortran'
+
+injectionRegex: '^(fortran|FORTRAN)$'
+
+treeSitter:
+  parserSource: 'github:tree-sitter/tree-sitter-fortran#7021f9f0f44bbcb7c646b594b6ef8db3ed787f8e'
+  grammar: 'tree-sitter/tree-sitter-fortran.wasm'
+  highlightsQuery: 'tree-sitter/highlights.scm'
+  foldsQuery: 'tree-sitter/folds.scm'
+  indentsQuery: 'tree-sitter/indents.scm'
+  tagsQuery: 'tree-sitter/tags.scm'
+
+fileTypes: [
+  'f90',
+  'F90',
+  'f95',
+  'F95',
+  'f03',
+  'F03',
+  'f08',
+  'F08',
+  'f',
+  'F',
+  'f77',
+  'F77',
+  'for',
+  'FOR',
+  'fpp',
+  'FPP'
+]
+
+comments:
+  start: '! '
+  line: '!'
+  # `tree-sitter-fortran` characterizes this as a preprocessor comment, so I'll
+  # leave it here.
+  block: ['/*', '*/']

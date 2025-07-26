@@ -1,0 +1,32 @@
+{
+  "name": "language-fortran-redux",
+  "version": "0.0.0",
+  "description": "Fortran language support for Pulsar",
+  "keywords": [
+    "language",
+    "grammar",
+    "fortran"
+  ],
+  "engines": {
+    "atom": "*",
+    "node": ">=14"
+  },
+  "main": "lib/main",
+  "repository": "https://github.com/savetheclocktower/language-fortran-redux",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "consumedServices": {
+    "hyperlink.injection": {
+      "versions": {
+        "0.1.0": "consumeHyperlinkInjection"
+      }
+    },
+    "todo.injection": {
+      "versions": {
+        "0.1.0": "consumeTodoInjection"
+      }
+    }
+  }
+}
